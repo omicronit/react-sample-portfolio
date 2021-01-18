@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ContactComponent() {
+const ContactComponent = () => {
     return (
         <section id="contact" className="section-padding">      
       <div className="contact-form">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HeaderComponent() {
+const HeaderComponent = () => {
     return (
         <header id="header-wrap">
             <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">

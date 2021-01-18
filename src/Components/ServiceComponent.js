@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ServiceComponent() {
+const ServiceComponent = () => {
     return (
         <section id="services" className="services section-padding">
       <h2 className="section-title wow flipInX" data-wow-delay="0.4s">What I do</h2>

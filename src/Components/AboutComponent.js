@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AboutComponent() {
+const AboutComponent = () => {
     return (
         <section id="about" className="section-padding">
         <div className="container">

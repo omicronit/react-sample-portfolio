@@ -1,6 +1,13 @@
 import React from 'react'
+import { EDUCATION_INFO, EXPERIENCE_INFO } from '../data/dummy-data'
+import ResumeInfoList from './ResumeInfoList'
 
-function ResumeComponent() {
+const ResumeComponent = () => {
+
+    const educationInfoList = EDUCATION_INFO.map((info, index) => <ResumeInfoList key={index} organization={info.organization} title={info.certificate} startDate={info.startYear} endDate={info.endYear} description={info.description} />)
+
+    const experienceInfoList = EXPERIENCE_INFO.map((info, index) => <ResumeInfoList key={index} organization={info.organization} title={info.designation} startDate={info.startDate} endDate={info.endDate} description={info.description} />)
+
     return (
         <div id="resume" className="section-padding">
       <div className="container">
@@ -12,27 +19,7 @@ function ResumeComponent() {
                   <i className="icon-graduation"></i>
                   <h2 className="timelin-title">Education</h2>
                 </li>
-                <li>
-                  <div className="content-text">
-                    <h3 className="line-title">Bsc In CSE - Yale University</h3>
-                    <span>2012 - 2016</span>
-                    <p className="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="content-text">
-                    <h3 className="line-title">Higher Secondary School - San Francisco College</h3>
-                    <span>2010 - 2012</span>
-                    <p className="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="content-text">
-                    <h3 className="line-title">Secondary School - Labratory High School</h3>
-                    <span>2005 - 2010</span>
-                    <p className="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
+                {educationInfoList.length > 0 ? educationInfoList: ''}
               </ul>
             </div>
           </div>
@@ -43,27 +30,7 @@ function ResumeComponent() {
                   <i className="icon-briefcase"></i>
                   <h2 className="timelin-title">Experience</h2>
                 </li>
-                <li>
-                  <div className="content-text">
-                    <h3 className="line-title">Art Director - Tesla Inc.</h3>
-                    <span>Jan 2018 - Present</span>
-                    <p className="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="content-text">
-                    <h3 className="line-title">UX/UI Designer - Samsung</h3>
-                    <span>Nov 2016 - Dec 2017</span>
-                    <p className="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="content-text">
-                    <h3 className="line-title">Intern UI Designer - UIdeck</h3>
-                    <span>Mar 2015 - Oct 2016</span>
-                    <p className="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
+                {experienceInfoList.length > 0 ? experienceInfoList: ''}
               </ul>
             </div>
           </div>

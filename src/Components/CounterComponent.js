@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CounterComponent() {
+const CounterComponent = () => {
     return (
         <section className="counter-section section-padding">
       <div className="container">
